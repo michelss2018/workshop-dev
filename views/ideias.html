@@ -30,74 +30,25 @@
         <main>
             <section id="ideas">
     
+              {% for idea in ideas %}
+
                 <div class="idea">
                   <img
-                    src="https://www.flaticon.com/svg/vstatic/svg/4021/4021915.svg?token=exp=1610746640~hmac=6a6b9f7a062e9d1d118eef1c99dd2fb6"
-                    alt="#">
+                    src="{{idea.img}}"
+                    alt="{{idea.title}}">
           
                   <div class="content">
-                    <h3>Cursos de Programação</h3>
-                    <p>Estudo</p>
+                    <h3>{{idea.title}}</h3>
+                    <p>{{idea.category}}</p>
                     <div class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eligendi iure, optio ex neque ullam
-                      perspiciatis ut earum voluptas corporis impedit voluptate! Animi quia facilis ipsa totam autem pariatur
-                      molestias.
+                      {{idea.description}}
                     </div>
-                    <a href="#">Ir para a ideia...</a>
-                  </div>
-                </div>
-          
-                <div class="idea">
-                  <img
-                    src="https://www.flaticon.com/svg/vstatic/svg/4021/4021951.svg?token=exp=1610746640~hmac=ae103d473d6937d979f7e8a2db261366"
-                    alt="#">
-          
-                  <div class="content">
-                    <h3>Cursos de Programação</h3>
-                    <p>Estudo</p>
-                    <div class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eligendi iure, optio ex neque ullam
-                      perspiciatis ut earum voluptas corporis impedit voluptate! Animi quia facilis ipsa totam autem pariatur
-                      molestias.
-                    </div>
-                    <a href="#">Ir para a ideia...</a>
-                  </div>
-                </div>
-          
-                <div class="idea">
-                  <img
-                  src="https://www.flaticon.com/svg/vstatic/svg/4021/4021951.svg?token=exp=1610746640~hmac=ae103d473d6937d979f7e8a2db261366"
-                  alt="#">
-          
-                  <div class="content">
-                    <h3>Cursos de Programação</h3>
-                    <p>Estudo</p>
-                    <div class="description">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eligendi iure, optio ex neque ullam
-                      perspiciatis ut earum voluptas corporis impedit voluptate! Animi quia facilis ipsa totam autem pariatur
-                      molestias.
-                    </div>
-                    <a href="#">Ir para a ideia...</a>
+                    <a href="{{idea.url}}">Ir para a ideia...</a>
                   </div>
                 </div>
 
-                <div class="idea">
-                    <img
-                    src="https://www.flaticon.com/svg/vstatic/svg/4021/4021951.svg?token=exp=1610746640~hmac=ae103d473d6937d979f7e8a2db261366"
-                    alt="#">
-            
-                    <div class="content">
-                      <h3>Cursos de Programação</h3>
-                      <p>Estudo</p>
-                      <div class="description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eligendi iure, optio ex neque ullam
-                        perspiciatis ut earum voluptas corporis impedit voluptate! Animi quia facilis ipsa totam autem pariatur
-                        molestias.
-                      </div>
-                      <a href="#">Ir para a ideia...</a>
-                    </div>
-                  </div>
-          
+                {% endfor %}          
+               
               </section>
         </main>
     
