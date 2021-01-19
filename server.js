@@ -30,7 +30,21 @@ const ideas = [
         category: "Estudo",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eligendi iure, optio ex neque ullam",
         url: "http://google.com",
-    }
+    },
+    {
+        img: "https://www.flaticon.com/svg/vstatic/svg/4062/4062906.svg?token=exp=1611096650~hmac=261fdccf2afcf7cd7676bd4eaa8a6772",
+        title: "Cursos de Programação 5",
+        category: "Estudo",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eligendi iure, optio ex neque ullam",
+        url: "http://google.com",
+    },
+    {
+        img: "https://www.flaticon.com/svg/vstatic/svg/4062/4062906.svg?token=exp=1611096650~hmac=261fdccf2afcf7cd7676bd4eaa8a6772",
+        title: "Cursos de Programação 6",
+        category: "Estudo",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eligendi iure, optio ex neque ullam",
+        url: "http://google.com",
+    },
 ]
 
 //Configurando arquivos estaticos (css, script, imagens, etc)

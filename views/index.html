@@ -3,19 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WorkshopDev</title>
 
-  <!--CSS-->
-  <link rel="stylesheet" href="/css/style.css">
-
-  <!--Script's-->
-  <script src="/js/script.js"></script>
-
-  <!--Fonts-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  {% include "head.html" %}
 
 </head>
 
@@ -62,68 +52,14 @@
 
     <section id="last-ideias">
 
-      {% for idea in ideas %}
-
-                <div class="idea">
-                  <img
-                    src="{{idea.img}}"
-                    alt="{{idea.title}}">
-          
-                  <div class="content">
-                    <h3>{{idea.title}}</h3>
-                    <p>{{idea.category}}</p>
-                    <div class="description">
-                      {{idea.description}}
-                    </div>
-                    <a href="{{idea.url}}">Ir para a ideia...</a>
-                  </div>
-                </div>
-
-                {% endfor %}
+      {% include "all_ideas.html" %}
 
     </section>
 
   </div>
 
   <!--Modal-->
-  <div id="modal" class="hide">
-    <div class="content">
-      <h1>Nova Ideia</h1>
-
-      <form action="">
-
-        <div class="input-wrapper">
-          <label for="title">Titulo da idéia</label>
-          <input type="text" name="title" id="title">
-        </div>
-
-        <div class="input-wrapper">
-          <label for="category">Categoria</label>
-          <input type="text" name="category" id="category">
-        </div>
-
-        <div class="input-wrapper">
-          <label for="image">Link da Imgagem</label>
-          <input type="url" name="image" id="image">
-        </div>
-
-        <div class="input-wrapper">
-          <label for="description">Digite uma descrição para essa ideia</label>
-          <textarea name="description" id="" cols="30" rows="10"></textarea>
-        </div>
-
-        <div class="input-wrapper">
-          <label for="link">Link da Idéia</label>
-          <input type="url" name="link" id="link">
-        </div>
-
-        <a href="#" onclick="onOff()">Voltar</a>
-        <button type="button">Salvar</button>
-
-      </form>
-
-    </div>
-  </div>
+  {% include "modal.html" %}
 
 </body>
 
