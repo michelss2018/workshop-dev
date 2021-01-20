@@ -2,24 +2,25 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <title>WorkshopDev</title>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Casa Criativa</title>
+    {% endblock title %}
 
-  {% include "head.html" %}
+    {% include "head.html" %}
 </head>
 
-<body>
+<body id="{{bodyId}}">
 
-  <div id="container">
+    <div id="container">
 
-    {|% block "content" %}
+        {% block content %}
+        {% endblock %}
 
-    {% endeblock %}
+    </div>
 
-  </div>
-
-  <!--Modal-->
-  {% include "modal.html" %}
+    <!--Modal-->
+    {% include "modal.html" %}
 
 </body>
 

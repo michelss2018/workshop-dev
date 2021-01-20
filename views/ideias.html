@@ -1,45 +1,36 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Ideias - Casa Criativa</title>
+{% extends "layout.html" %}
 
-    {% include "head.html" %}
+{% set bodyId = "page-ideias" %}
 
-</head>
-<body id="page-ideias">
-    
-    <div id="container">
-        <header>
-            <a href="/">
-                <img src="/img/logo.png" alt="">
-            </a>
-            <nav>
-                <li><a href="/">Inicio</a></li>
-                <li onclick="onOff()"><a href="#" class="button">Nova Ideia</a></li>
-            </nav>
-        </header>
-    
-        <section id="title">
-            <p>em exibição</p>
-            <h1>Idéias</h1>
-        </section>
-    
-        <main>
-            <section id="ideas">
-    
-              {% include "all_ideas.html" %}         
-               
-              </section>
-        </main>
-    
-        <footer>
-            Com ❤️ <a href="#" target="_blanck">Rocketseat</a>
-        </footer>
-    </div>
+{% block title %}
+<title>Ideias - Casa Criativa</title>
+{% endblock %}
 
- <!--Modal-->
-    {% include "modal.html" %}
+{% block content %}
+<header>
+  <a href="/">
+    <img src="/img/logo.png" alt="">
+  </a>
+  <nav>
+    <li><a href="/">Inicio</a></li>
+    <li onclick="onOff()"><a href="#" class="button">Nova Ideia</a></li>
+  </nav>
+</header>
 
-</body>
-</html>
+<section id="title">
+  <p>em exibição</p>
+  <h1>Idéias</h1>
+</section>
+
+<main>
+  <section id="ideas">
+
+    {% include "all_ideas.html" %}
+
+  </section>
+</main>
+
+<footer>
+  Com ❤️ <a href="#" target="_blanck">Rocketseat</a>
+</footer>
+{% endblock %}

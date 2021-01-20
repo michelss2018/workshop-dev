@@ -1,66 +1,48 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends "layout.html" %}
 
-<head>
-  <meta charset="UTF-8">
-  <title>WorkshopDev</title>
+{% block content %}
 
-  {% include "head.html" %}
+<section id="intro">
 
-</head>
+  <header>
+    <a href="/">
+      <img src="/img/logo.png" alt="">
+  </a>
+  </header>
 
-<body>
+  <main>
+    <p>
+      Ficar em casa em períodos longos, não deve ser nada fácil.
+    </p>
 
-  <div id="container">
+    <p>
+      Por isso, iremos catalogar ideias, <strong> brincadeiras, jogos, filmes, livros, cursos, dicas </strong> e
+      tudo
+      que for necessário para tornar esse momento mais interessante.
+    </p>
 
-    <section id="intro">
+    <p>
+      Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicionando a sua ideia.
+    </p>
+  </main>
 
-      <header>
-        <a href="/">
-          <img src="/img/logo.png" alt="">
-      </a>
-      </header>
+  <section id="buttons">
+    <button type="button" onclick="onOff()">+ Adicionar Idéia</button>
+    <a href="/ideias" class="button">Ver Idéias</a>
+  </section>
 
-      <main>
-        <p>
-          Ficar em casa em períodos longos, não deve ser nada fácil.
-        </p>
+  <footer>
+    Com ❤️ <a href="#" target="_blanck">Rocketseat</a>
+  </footer>
 
-        <p>
-          Por isso, iremos catalogar ideias, <strong> brincadeiras, jogos, filmes, livros, cursos, dicas </strong> e
-          tudo
-          que for necessário para tornar esse momento mais interessante.
-        </p>
+  <script src="/js/script.js"></script>
 
-        <p>
-          Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicionando a sua ideia.
-        </p>
-      </main>
+</section>
 
-      <section id="buttons">
-        <button type="button" onclick="onOff()">+ Adicionar Idéia</button>
-        <a href="/ideias" class="button">Ver Idéias</a>
-      </section>
+<section id="last-ideias">
 
-      <footer>
-        Com ❤️ <a href="#" target="_blanck">Rocketseat</a>
-      </footer>
+  {% include "all_ideas.html" %}
 
-      <script src="/js/script.js"></script>
+</section>
 
-    </section>
-
-    <section id="last-ideias">
-
-      {% include "all_ideas.html" %}
-
-    </section>
-
-  </div>
-
-  <!--Modal-->
-  {% include "modal.html" %}
-
-</body>
-
-</html>
+{% endblock %}
